@@ -1,0 +1,60 @@
+.hero{
+    position: relative;
+    height: 310px;
+    margin-bottom: 2rem;
+    
+     @include break-point-up(medium){
+          height: 210px;
+     }
+    
+    .bookmark{
+        background-color: $light-gray;
+        border-radius: 50px;
+        border: none;
+        text-align: center;
+        color:  $white;
+        font-size: 20px;
+        padding: 1rem;
+        margin-top: -3rem;
+        align-self: center;
+        // z-index: -1;
+       
+        
+
+    }
+    &_image{
+        position: absolute;
+        background: none;
+        margin-bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -7rem;
+        z-index: 1;
+
+    }
+    
+    &_text{
+        position: absolute;
+        border-radius: 10px;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -5rem;        
+        
+        h1{
+            font-weight: $font-darker;
+            color: $black;
+        margin-bottom: 2rem;
+        }
+        p{
+        margin-bottom: 2rem;
+        }
+        
+    }
+    
+    
+    
+
+}

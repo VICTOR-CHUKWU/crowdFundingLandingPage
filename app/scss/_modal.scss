@@ -1,0 +1,181 @@
+.modal{
+    position: relative;
+    .isvissible1{
+        display: none;
+    }
+    .isvissible2{
+        display: none
+    }
+    
+    .enter-pledge{
+        border-top: 1px solid $light-gray;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        @include break-point-up(large){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            // align-items: flex-start;
+             }
+        .pledged-buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .clear-button{
+            background-color: white;
+            border: 1px solid $light-gray;
+            color: black;
+        }
+    }
+    h2{
+        font-size: 30px;
+        font-weight: 2000;
+          color: $black; 
+          margin-left: 3rem;
+          margin-bottom: 0px;
+         @include break-point-down(small){
+        font-size: 20px;
+        margin-left: 2rem;
+         }
+    }
+    p{
+        margin-bottom: 1rem;
+        font-size: 15px;
+        width: 100%;
+    }
+    &_main-page{
+        position: absolute;
+        z-index: 3;
+        top: -7.5rem;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 10px;
+    }
+    &_rewards{
+        border: 1px solid $light-gray;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    .top-about{
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        position: relative;
+        input{
+            position: absolute;
+            top: 16px;
+        }
+        label{
+            background:#eee;
+             border:1px solid #ddd;
+               border-radius:100%;
+              cursor:pointer;
+              height:40px;
+                left:0;
+             position:absolute;
+              top:5px;
+                 width:40px;
+                 &::after{
+                    background:#333;
+                     border-radius:100%;
+                     content:"";
+                     height:30px;
+                    left:4px;
+                      opacity:.25;
+                     position:absolute;
+                      top:4px;
+                         transition:opacity 100ms ease-in;
+                     width:30px;
+                     @include break-point-down(small){
+                        width: 20px;
+                        height: 20px;
+                    } 
+                 }
+                 &:hover::after { opacity:.5;}
+                 @include break-point-down(small){
+                     width: 30px;
+                     height: 30px;
+                 }
+        }
+        input[type="radio"]:checked + label:after { opacity:1; }
+        
+        a{
+            color: $moderate-cyan;
+            font-size: 20px;
+            font-weight: bold;
+             margin-left: 5rem;
+             margin-top: -10px;
+             @include break-point-down(small){
+                 font-size: 15px;
+                 margin-left: 0;
+                //  margin-top: 0px;
+             }
+        }
+    }
+    .amount-left{
+        font-size: 20px;
+    font-weight: bold;
+    color: $black;
+    margin-bottom: 1rem;
+    }
+    .write-ups{
+        width: 100%;
+        font-size: 15px;
+        margin-bottom: 2rem;
+
+    }
+    .inner-reward{
+        @include break-point-up(large){
+            h2{
+                margin-top: 0px;
+                max-width: 300px;
+            }
+            a{
+                margin-top: 0.6rem;
+                margin-left: 0.8rem;
+            }
+            display: flex;
+            flex-direction: row;
+            // justify-content: space-between;
+            align-items: center;
+        } 
+    }
+    .rewards-for-pc{
+        @include break-point-up(large){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+    }
+    .modal-complete{
+        position: absolute;
+        border-radius: 10px;
+        top: -12rem;
+        z-index: 6;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        @include break-point-down(small){
+            top: -16rem;
+        }
+        p{
+            max-width: 400px;
+            word-break: normal;
+            font-size: 15px;
+
+        }
+
+    }
+    
+
+    
+}

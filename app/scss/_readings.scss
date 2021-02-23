@@ -1,0 +1,46 @@
+.readings{
+    margin-bottom: 1.5rem;
+   .price{
+    h2{
+        font-size: 30px;
+        font-weight: 2000;
+    }
+   }
+
+    &_price{
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        border-radius: 10px;
+        width: 100%;
+        .rangee{
+            width: 80%;
+            margin-top: 1.5rem;
+        }
+        @include break-point-up(large){
+            .price{
+                &:not(:first-child){
+                border-left: 1px solid lightgray;
+                }
+            }
+            
+            display: grid;
+            grid-template-areas: 
+            'price1 price2 price3'
+            'ranger ranger ranger';
+            grid-template-columns: repeat(3,1fr);
+            .first{
+                grid-area: price1;
+            }
+            .second{
+                grid-area: price2;
+            }
+            .third{
+                grid-area: price3;
+            }
+            .range{
+                grid-area: ranger;
+                
+            }
+        }
+    }
+}

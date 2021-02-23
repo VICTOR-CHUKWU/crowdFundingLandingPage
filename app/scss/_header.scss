@@ -1,0 +1,117 @@
+.header{
+
+
+    &.open{
+        // .overlay{
+        //     display: block;
+            
+        // }
+        .header_toggle{
+            > span:first-child{
+                transform: rotate(45deg);
+    
+            }
+            > span:nth-child(2){
+              opacity: 0;
+            }
+            > span:last-child{
+               transform: rotate(-45deg);
+            }
+        }
+       
+    }
+
+    .overlay{
+        opacity: 0;
+        position: fixed;
+        top: 28.125rem;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: rgba(231, 221, 221, 0.8);
+        }
+        .container{
+        padding-right:  6rem;
+        padding-left: 6rem;
+        }
+    background-image: url(../../images/image-hero-mobile.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    @include break-point-up(large){
+    background-image: url(../../images/image-hero-desktop.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 60vh;
+    }
+    nav{
+        position: relative;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    
+    }
+
+    &_logo{
+        img{
+            width: 8.8125rem;
+            height: 1.375rem;
+            margin-right: 0.5rem;
+        }
+
+    }
+    &_toggle{ //mobile
+       > span {
+           display: block;
+           width: 26px;
+           height: 3px;
+           background-color: $white;
+           transition: all 300ms ease-in-out;
+           transform-origin: 1px 2px;
+           &:not(:last-child){
+               margin-bottom: 5px;
+           }
+       }
+    
+    }
+    &__menu{
+        background-color: $white;
+        margin-top: 0rem;
+        position: absolute;
+        padding: 1rem;
+        border-radius: 10px;
+        width: calc(100% - 12rem);
+         height: 326px;
+         z-index: 6;
+        left: 50%;
+        transform: translateX(-50%);
+
+        a{
+            display: block;
+            color: $black;
+            padding: 0.625rem;
+            text-align: center;
+            font-weight: $font-medium;
+            border-bottom: 1px solid $light-gray;
+            &:not(:last-child){
+                margin-bottom: 3rem;
+            }
+        }
+    }
+    &__links{
+        a{
+            font-size: $font-medium;
+            color: $light-gray;
+            transition: color 300ms ease-in-out;
+
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
+            
+            &:hover{
+                color: $dark-gray;
+            }
+        }
+        
+    }
+    
+}

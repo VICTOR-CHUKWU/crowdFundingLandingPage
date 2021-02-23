@@ -1,0 +1,59 @@
+.about{
+   margin-bottom: 1.5rem;
+    
+    p{
+        margin-bottom: 1rem;
+        font-size: 15px;
+        width: 100%;
+    }
+    &_main-page{
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 10px;
+    }
+    &_rewards{
+        border: 1px solid $light-gray;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    .top-about{
+        margin-bottom: 1rem;
+        a{
+            color: $moderate-cyan;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        @include break-point-up(medium){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .write-ups{
+        width: 100%;
+        font-size: 15px;
+
+    }
+    .about-inputs{
+        margin-bottom: 1rem;
+        width: 100%;
+        .amount-left{
+            font-size: 20px;
+        font-weight: bold;
+        color: $black;
+        margin-bottom: 1rem;
+        }
+        
+        @include break-point-up(medium){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+        
+    }
+    
+}

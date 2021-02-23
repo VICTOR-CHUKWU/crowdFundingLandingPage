@@ -1,0 +1,127 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+    font-size: $font-medium;
+    font-weight: $font-light;
+    color: $dark-gray;
+    line-height: 1.4;
+    background-color: $light-gray;
+    &.noscroll{
+        overflow: hidden;
+    }
+}
+h3{
+    margin-top: 0px;
+    color: $black;
+    font-size: $font-medium;
+    font-weight: $font-darker;
+}
+h2{
+    font-size: 30px;
+        font-weight: 2000;
+    color: $black;
+
+}
+
+.align-text-center{
+    text-align: center;
+}
+.flex{
+    display: flex;
+    &-jc-sb{
+        justify-content: space-between;
+    }
+    &-jc-sa{
+        justify-content: space-around;
+    }
+    
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+}
+img{
+    width: 100%;
+}
+a, a:visited, a:hover{
+    text-decoration: none;
+}
+
+//buton
+.button{
+    padding: 0.5rem 0.85rem;
+    border-radius: 20px;
+    border: 0;
+    outline: none;
+    color: $white;
+    background: $dark-cyan;
+    @include break-point-up(medium){
+        padding: 1rem 1.85rem;
+    border-radius: 50px;
+
+    }
+}
+.button:hover{
+    background: $moderate-cyan;
+}
+
+//visibility
+.hide-for-mobile{
+    //hide for mobile and tablet
+    @include break-point-down(medium){
+        display: none;
+    }
+}
+.hide-for-pc{
+    //hide for desktop view port width
+    @include break-point-up(large){
+        display: none;
+    }
+}
+.logo-img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.cancel-img{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+main{
+    margin-right:  2rem;
+    margin-left: 2rem;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
+.hr{
+    width: 100px;
+    height: 2px;
+    background-color: $light-gray;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+   
+}
+.background{
+    background: $whitesmoke;
+}
+.padded-side{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.inactive{
+    opacity: 0.6;
+}
+
